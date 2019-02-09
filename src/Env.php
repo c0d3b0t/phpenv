@@ -47,9 +47,15 @@ class Env
 		}
 	}
 
+	/**
+	 * @param $config
+	 */
 	public function put( $config )
 	{
-		putenv( $config );
+		if( $config{0} != '#' )
+		{
+			putenv( $config );
+		}
 	}
 
 	/**

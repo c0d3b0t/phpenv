@@ -22,7 +22,7 @@ class EnvTest extends TestCase
 		$appName = preg_replace('/\s+/', ' ', trim($env->get('APP_NAME')));
 
 		$this->assertEquals(
-			'phpenv', $appName
+			'The Phpenv Package', $appName
 		);
 
 		$this->assertFalse(

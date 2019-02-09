@@ -13,7 +13,8 @@ If you want to store the .env file somewhere else, you can pass the full path of
 Example of the .env file:
 
 ```
-APP_NAME=phpenv
+# Test .env file
+APP_NAME=The Phpenv Package
 APP_ENV=local
 ```
 
