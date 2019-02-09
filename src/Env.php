@@ -21,7 +21,7 @@ class Env
 	 */
 	public static function getInstance( $envFile = null )
 	{
-		if ( !is_null( self::$instance ) )
+		if ( is_null( self::$instance ) )
 		{
 			self::$instance = new self( $envFile );
 		}
@@ -43,15 +43,20 @@ class Env
 
 		foreach ( $envConfigsArr as $config )
 		{
-			putenv( $config );
+			$this->put( $config );
 		}
+	}
+
+	public function put( $config )
+	{
+		putenv( $config );
 	}
 
 	/**
 	 * @param $key
 	 * @return array|false|string
 	 */
-	public function getEnv( $key )
+	public function get( $key )
 	{
 		return getenv( $key );
 	}

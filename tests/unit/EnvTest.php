@@ -13,20 +13,20 @@ class EnvTest extends TestCase
 
 		$env = Env::getInstance( $envTestFile );
 
-		$appEnv = preg_replace('/\s+/', ' ', trim($env->getEnv('APP_ENV')));
+		$appEnv = preg_replace('/\s+/', ' ', trim($env->get('APP_ENV')));
 
 		$this->assertEquals(
 			'local', $appEnv
 		);
 
-		$appName = preg_replace('/\s+/', ' ', trim($env->getEnv('APP_NAME')));
+		$appName = preg_replace('/\s+/', ' ', trim($env->get('APP_NAME')));
 
 		$this->assertEquals(
 			'phpenv', $appName
 		);
 
 		$this->assertFalse(
-			$env->getEnv('NON_EXISTING_VAR')
+			$env->get('NON_EXISTING_VAR')
 		);
 	}
 }
