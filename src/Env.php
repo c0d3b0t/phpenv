@@ -64,6 +64,6 @@ class Env
 	 */
 	public function get( $key )
 	{
-		return getenv( $key );
+		return trim( getenv( $key ) );
 	}
 }
