@@ -43,6 +43,8 @@ class Env
 
 		foreach ( $envConfigsArr as $config )
 		{
+			str_replace( "\n", "", $config );
+
 			$this->put( $config );
 		}
 	}
