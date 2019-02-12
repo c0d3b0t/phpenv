@@ -1,4 +1,4 @@
-## 1.0.2
+## 1.0.2 2019-02-13
 
 ## 1.0.1 2019-02-13
 * Trim the environment variable value in the Env::get() method.
