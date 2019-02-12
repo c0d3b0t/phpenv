@@ -25,7 +25,7 @@ class EnvTest extends TestCase
 			'The Phpenv Package', $appName
 		);
 
-		$this->assertFalse(
+		$this->assertEmpty(
 			$env->get('NON_EXISTING_VAR')
 		);
 	}
