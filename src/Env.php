@@ -45,7 +45,10 @@ class Env
 		{
 			$config = str_replace( "\n", "", $config );
 
-			$this->put( $config );
+			if( $config )
+			{
+				$this->put( $config );
+			}
 		}
 	}
 
