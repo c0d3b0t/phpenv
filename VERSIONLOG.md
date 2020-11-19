@@ -1,3 +1,5 @@
+## 1.0.5
+
 ## 1.0.4 2020-11-19
 * Fix: "PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated"
 
