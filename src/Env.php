@@ -57,7 +57,7 @@ class Env
 	 */
 	public function put( $config )
 	{
-		if( $config{0} != '#' )
+		if( $config[0] != '#' )
 		{
 			putenv( $config );
 		}
